@@ -70,14 +70,6 @@ expInfo['psychopyVersion'] = psychopyVersion
 # Data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
 filename = _thisDir + os.sep + u'data/%s_%s_%s' % (expInfo['participant'], expName, expInfo['date'])
 
-# An ExperimentHandler isn't essential but helps with data saving
-thisExp = data.ExperimentHandler(name=expName, version='',
-    extraInfo=expInfo, runtimeInfo=None,
-    originPath='C:\\Users\\remco\\OneDrive\\Documenten\\Master- ACP\\Stage CMH\\Stage- Nov2020-Jan2021\\PASAT_final_ED_Pyscripts\\PASAT\\PASAT_EN.py',
-    savePickle=True, saveWideText=True,
-    dataFileName=filename)
-logging.console.setLevel(logging.WARNING)  # this outputs to the screen, not a file
-
 endExpNow = False  # flag for 'escape' or other condition => quit the exp
 frameTolerance = 0.001  # how close to onset before 'same' frame
 
