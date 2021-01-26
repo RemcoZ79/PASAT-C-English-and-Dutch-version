@@ -1,22 +1,23 @@
 ﻿#!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+#### Experiment was Programmed by Remco van Zijderveld (January, 2021)
+
+########### IMPORT PACKAGES ###########
+
 from __future__ import absolute_import, division
 
-from psychopy import locale_setup
-from psychopy import prefs
-from psychopy import sound, gui, visual, core, data, event, logging, clock
-from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED,
-                                STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
+from psychopy import locale_setup, prefs, sound, gui, visual, core, data, event, logging, clock 
+from psychopy.constants import (NOT_STARTED, STARTED, PLAYING, PAUSED, STOPPED, FINISHED, PRESSED, RELEASED, FOREVER)
 
 import numpy as np  # whole numpy lib is available, prepend 'np.'
-from numpy import (sin, cos, tan, log, log10, pi, average,
-                   sqrt, std, deg2rad, rad2deg, linspace, asarray)
+from numpy import (sin, cos, tan, log, log10, pi, average, sqrt, std, deg2rad, rad2deg, linspace, asarray)
 from numpy.random import random, randint, normal, shuffle
-import os  # handy system and path functions
-import sys  # to get file system encoding
+import os, sys  # handy system and path functions
 
 from psychopy.hardware import keyboard
+
+########### PARAMETERS ###########
 
 #how many trials must be completed to end a trial block successfully?
 Trial_repeats = 4 
@@ -51,6 +52,7 @@ okay = -3
 bad = -5
 
 
+########### START EXPERIMENT ###########
 
 # Ensure that relative paths start from the same directory as this script
 _thisDir = os.path.dirname(os.path.abspath(__file__))
@@ -100,6 +102,8 @@ else:
 # create a default keyboard (e.g. to check for escape)
 defaultKeyboard = keyboard.Keyboard()
 
+########### INSTRUCTION SCREEN ###########
+
 # Initialize components for Routine "Instruction_screen"
 Instruction_screenClock = core.Clock()
 Click_to_continue = event.Mouse(win=win)
@@ -117,6 +121,8 @@ Instruction_text = visual.TextStim(win=win, name='Instruction_text',
 Determine_stim_presentation_timeClock = core.Clock()
 round_number = 0
 time_zero = core.monotonicClock.getTime()
+
+########### TRIAL SET UP ###########
 
 # Initialize components for Routine "Trial_screen"
 Trial_screenClock = core.Clock()
@@ -404,6 +410,8 @@ text_18 = visual.TextStim(win=win, name='text_18',
     languageStyle='LTR',
     depth=-49.0);
 
+########### FEEDBACK TRIAL SET UP ###########
+
 # Initialize components for Routine "Feedback_screen"
 Feedback_screenClock = core.Clock()
 ansColor = ''
@@ -682,6 +690,9 @@ T_18_FB = visual.TextStim(win=win, name='T_18_FB',
     color='blue', colorSpace='rgb', opacity=1, 
     languageStyle='LTR',
     depth=-40.0);
+
+
+########### BREAK SCREEN ###########
 
 # Initialize components for Routine "Rest_screen"
 Rest_screenClock = core.Clock()
